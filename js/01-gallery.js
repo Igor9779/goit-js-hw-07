@@ -29,14 +29,12 @@ let instance;
 
 function onImagesClick(e) {
     e.preventDefault();
-    console.log(e.target);
 
     if (e.target.nodeName !== 'IMG') {
         return;
     };
     
     const selectedImages = e.target.dataset.source;
-    console.log(selectedImages);
 
     instance = basicLightbox.create(`<div class="modal">
         <img src="${selectedImages}">
